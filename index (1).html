@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="google-site-verification" content="a6LPHjhqkHqJAWVEoDH7cR0hAGMgZhMJzqxuycTszLo" />
+  <meta name="description" content="Um site aleatório usado para divulgar um game indie que nunca deve sair.">
+  <meta name="keywords" content="Machine Learning, machine learning, Machine learning, game indie, Game Indie, Cadu, Cadusquela, teste, Teste">
+  <meta name="author" content="Cadu, Cadusquela, Carlos Eduardo">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Machine Learning">
+  <meta property="og:description" content="Um site aleatório feito por um cara ai.">
+  <meta property="og:image" content="https://github.com/Cadusquela/Nana.com/blob/main/Logo%20simples%20circular%20esmaltaria%20preto.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://Cadusquela.github.io/teste">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Fascinate&amp;display=swap" rel="stylesheet">
+  <link rel="icon" href="https://github.com/Cadusquela/Nana.com/blob/main/Logo%20simples%20circular%20esmaltaria%20preto.png?raw=true" type="image/x-icon">
+  <title>Machine Learning</title>
+  <style>
+    @charset "UTF-8";
+
+    html {
+      font-family: "Fascinate", system-ui;
+    }
+
+    body {
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    .top {
+      position: fixed;
+      background-color: rgb(28, 33, 32);
+      padding: 10px;
+      height: 100px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      width: 99%;
+    }
+
+    .logo img {
+      width: 100px;
+    }
+
+    .Barra {
+      position: relative;
+      z-index: 10;
+    }
+
+    .Barra button {
+      background-color: rgb(27, 32, 31);
+      border: none;
+      color: white;
+      font-size: 22px;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+    }
+
+    .Barra ul {
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 200px;
+      background-color: rgb(28, 33, 32);
+      border-left: 1px solid white;
+      padding-top: 100px;
+      list-style: none;
+      margin: 0;
+      -webkit-transform: translateX(100%);
+      -moz-transform: translateX(100%);
+      -o-transform: translateX(100%);
+      transform: translateX(100%);
+      -webkit-transition: -webkit-transform 0.4s ease;
+      -moz-transition: -moz-transform 0.4s ease;
+      -o-transition: -o-transform 0.4s ease;
+      transition: transform 0.4s ease;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      gap: 20px;
+      padding-left: 20px;
+    }
+
+    .Barra ul.active {
+      -webkit-transform: translateX(0%);
+      -moz-transform: translateX(0%);
+      -o-transform: translateX(0%);
+      transform: translateX(0%);
+    }
+
+    .Barra li {
+      color: white;
+      cursor: pointer;
+      -webkit-transition: background 0.3s ease;
+      -moz-transition: background 0.3s ease;
+      -o-transition: background 0.3s ease;
+      transition: background 0.3s ease;
+    }
+
+    .Barra li:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding-left: 5px;
+    }
+
+    .list1 {
+      background-color: rgb(28, 33, 32);
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 80%;
+      height: 10px;
+      -webkit-transition: height 0.6s ease;
+      -moz-transition: height 0.6s ease;
+      -o-transition: height 0.6s ease;
+      transition: height 0.6s ease;
+      overflow: hidden;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
+
+    .list1:hover {
+      height: 50px;
+    }
+
+    .list1 p {
+      color: white;
+      opacity: 0;
+      -webkit-transition: opacity 0.6s ease;
+      -moz-transition: opacity 0.6s ease;
+      -o-transition: opacity 0.6s ease;
+      transition: opacity 0.6s ease;
+    }
+
+    .list1:hover p {
+      opacity: 1;
+    }
+
+    .conteudo {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin: 0;
+      padding-top: 100px;
+    }
+
+    .corpo {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      width: 70%;
+    }
+
+    .corpo img {
+      width: 100vw;
+      height: 350px;
+      image-rendering: optimizeQuality;
+      image-rendering: -webkit-optimize-contrast;
+    }
+
+    .destaque {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      background-color: rgb(28, 33, 32);
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      width: 30%;
+      border-left: dashed white;
+    }
+
+    .destaque h2 {
+      color: white;
+    }
+
+    .destaque a {
+      text-decoration: none;
+      color: inherit;
+      margin: 0 auto;
+    }
+
+    .pagina1, .pagina2, .pagina3 {
+      width: 10%;
+      padding: 1%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+
+    .pagina1:hover, .pagina2:hover, .pagina3:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .pagina1 a, .pagina2 a, .pagina3 a {
+      text-decoration: none;
+    }
+
+    .secao {
+      background-color: rgb(28, 33, 32);
+      width: 100%;
+      height: 500px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      border-top: dashed white;
+      color: white;
+    }
+
+    .secao p {
+      margin: 1%;
+    }
+  </style>
+<style type="text/css" id="operaUserStyle"></style></head>
+<body>
+  <header class="top">
+    <div class="logo">
+      <img src="https://github.com/Cadusquela/Nana.com/blob/main/Logo%20simples%20circular%20esmaltaria%20preto.png?raw=true" alt="logo">
+    </div>
+    <div class="Barra">
+      <button id="menu-btn" onclick="Menubar()">☰</button>
+      <ul id="lateral">
+        <li>Perfil</li>
+        <li>Configurações</li>
+        <li>Sair</li>
+      </ul>
+    </div>
+    <nav class="list1">
+      <div class="pagina1"><a href="./Home.html"><p>Home</p></a></div>
+      <div class="pagina2"><a href="./Mais%20sobre.html"><p>Produtos</p></a></div>
+      <div class="pagina3"><a href="https://www.youtube.com/@cadusquela"><p>Canal</p></a></div>
+    </nav>
+  </header>
+
+  <div class="conteudo">
+    <div class="corpo">
+      <img src="https://github.com/Cadusquela/Nana.com/blob/main/capa.png?raw=true" alt="capa">
+    </div>
+    <div class="destaque">
+      <a href="./Amor.html" target="_self"><h2>Mais sobre...</h2></a>
+    </div>
+  </div>
+
+  <section class="secao">
+    <p>
+      Não vou usar essa porra desse site pra nada, mas olha que foda que eu fiz<br><br>
+      Eai meu guri, blz, se tu ta vendo isso tu é foda, vou atualizar umas paradas aqui, 
+      e se tu tiver sorte eu ainda lanço uma demo do jogo pra tu jogar.
+    </p>
+  </section>
+  
+  <script>
+    function Menubar() {
+      const menu = document.getElementById("lateral");
+      menu.classList.toggle("active");
+    }
+
+    document.addEventListener('click', function(event) {
+      const menu = document.getElementById("lateral");
+      const button = document.getElementById("menu-btn");
+
+      if (!menu.contains(event.target) && !button.contains(event.target)) {
+        menu.classList.remove("active");
+      }
+    });
+  </script>
+</body>
+</html>
