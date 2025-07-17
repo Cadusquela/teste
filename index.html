@@ -176,11 +176,12 @@
     }
 
     .corpo img {
-      width: 100vw;
-      height: 350px;
-      image-rendering: optimizeQuality;
-      image-rendering: -webkit-optimize-contrast;
-    }
+  width: 100%;
+  max-width: 100%;   /* garante que nunca passe do tamanho da tela */
+  height: auto;      /* mantém a proporção original */
+  image-rendering: optimizeQuality;
+  image-rendering: -webkit-optimize-contrast;
+}
 
     .destaque {
       display: -webkit-box;
@@ -243,6 +244,97 @@
     .secao p {
       margin: 1%;
     }
+
+      @media (max-width: 768px) {
+    /* Centraliza a logo no topo */
+      .top {
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    padding: 15px;
+  }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .logo img {
+      width: 80px;
+    }
+
+    /* Menu superior desce e fica mais compacto */
+    nav.list1 {
+    position: static;            /* não fica absoluto mais */
+    width: 100%;
+    height: auto;                /* deixa altura automática */
+    overflow: visible;
+    justify-content: center;
+    flex-wrap: wrap;             /* permite quebrar linha se precisar */
+    gap: 5px;
+    padding: 10px;
+  }
+
+nav.list1 div {
+    width: auto;                 /* cada item se ajusta ao conteúdo */
+    padding: 5px 10px;
+  }
+
+  nav.list1 p {
+    opacity: 1 !important;       /* força texto sempre visível */
+    font-size: 14px;             /* texto menor */
+  }
+    .conteudo {
+      flex-direction: column;
+      padding-top: 140px;
+    }
+
+    .corpo {
+      width: 100%;
+    padding: 0;
+    margin: 0;
+    }
+
+    .corpo img {
+      width: 100%;       /* ocupa toda a largura */
+      height: auto;      /* mantém proporção da imagem */
+      display: block;    /* remove qualquer espaço extra */
+    }
+
+    .destaque {
+       width: 100%;
+    border-left: none;
+    border-top: dashed white;
+    padding: 20px;
+    }
+
+    .secao {
+      height: auto;
+    padding: 20px;
+    }
+  }
+
+  /* Telas bem pequenas (≤480px) */
+  @media (max-width: 480px) {
+    .logo img {
+      width: 60px;
+    }
+
+    nav.list1 p {
+    font-size: 12px;
+  }
+    nav.list1 div {
+      padding: 3px 5px;
+    }
+
+    .secao p {
+      font-size: 14px;
+    }
+
+    .conteudo {
+    padding-top: 160px;
+    }
+  }
   </style>
 <style type="text/css" id="operaUserStyle"></style></head>
 <body>
