@@ -32,13 +32,15 @@
       margin: 0;
       overflow-x: hidden;
       background-color: rgb(28, 33, 32);
+      width: 100vw;
+      height: 100vh;
     }
 
     .top {
       position: fixed;
       background-color: rgb(28, 33, 32);
-      padding: 10px;
-      height: 100px;
+      padding: 9px;
+      height: 90px;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -49,6 +51,7 @@
       -ms-flex-align: center;
       align-items: center;
       width: 99%;
+      z-index: 1000;
     }
 
     .logo img {
@@ -74,7 +77,7 @@
       position: fixed;
       top: 0;
       right: 0;
-      height: 100%;
+      height: 105%;
       width: 200px;
       background-color: rgb(28, 33, 32);
       border-left: 1px solid white;
@@ -124,7 +127,7 @@
     .list1 {
       background-color: rgb(28, 33, 32);
       position: absolute;
-      top: 100%;
+      top: 90%;
       left: 0;
       width: 80%;
       height: 10px;
@@ -176,9 +179,17 @@
       width: 70%;
     }
 
+     .baixo {
+    display: flex;
+    align-items: center;
+  }
+
+  .baixo img{
+    width: 10%;
+  }
+
     .corpo img {
-  width: 100%;
-  max-width: 100%;   /* garante que nunca passe do tamanho da tela */
+  width: 100vw;
   height: auto;      /* mantém a proporção original */
   image-rendering: optimizeQuality;
   image-rendering: -webkit-optimize-contrast;
@@ -196,7 +207,7 @@
       -ms-flex-pack: center;
       justify-content: center;
       width: 30%;
-      border-left: dashed white;
+      border-left: dashed white
     }
 
     .destaque h2 {
@@ -240,6 +251,7 @@
       display: flex;
       border-top: dashed white;
       color: white;
+      margin-top: 100px;
     }
 
     .secao p {
@@ -264,26 +276,26 @@
       width: 80px;
     }
 
-    /* Menu superior desce e fica mais compacto */
+    
     nav.list1 {
-    position: static;            /* não fica absoluto mais */
+    position: static;        
     width: 100%;
-    height: auto;                /* deixa altura automática */
+    height: auto;              
     overflow: visible;
     justify-content: center;
-    flex-wrap: wrap;             /* permite quebrar linha se precisar */
+    flex-wrap: wrap;             
     gap: 5px;
     padding: 10px;
   }
 
 nav.list1 div {
-    width: auto;                 /* cada item se ajusta ao conteúdo */
+    width: auto;                
     padding: 5px 10px;
   }
 
   nav.list1 p {
-    opacity: 1 !important;       /* força texto sempre visível */
-    font-size: 14px;             /* texto menor */
+    opacity: 1 !important;       
+    font-size: 14px;             
   }
     .conteudo {
       flex-direction: column;
@@ -291,19 +303,19 @@ nav.list1 div {
     }
 
     .corpo {
-      width: 100%;
+      width: 100vw;
     padding: 0;
     margin: 0;
     }
 
     .corpo img {
-      width: 100%;       /* ocupa toda a largura */
-      height: auto;      /* mantém proporção da imagem */
-      display: block;    /* remove qualquer espaço extra */
+      width: 100vw;      
+      height: auto;      
+      display: block;  
     }
 
     .destaque {
-       width: 100%;
+       width: 100vw;
     border-left: none;
     border-top: dashed white;
     padding: 20px;
@@ -315,7 +327,7 @@ nav.list1 div {
     }
   }
 
-  /* Telas bem pequenas (≤480px) */
+  
   @media (max-width: 480px) {
     .logo img {
       width: 60px;
@@ -334,8 +346,88 @@ nav.list1 div {
 
     .conteudo {
     padding-top: 200px;
+    width: 100vw;
+    }
+
+    .corpo img{
+      width: 100vw;
     }
   }
+
+      section.slider{
+      margin: 0%;
+      width: 100%;
+      height: auto;
+      padding: 0% !important;
+      overflow: hidden;
+    }
+
+    .slider-content{
+      display: flex;
+      width: 400%;
+      height: auto;
+      margin-top: 170px;
+    }
+
+    .slider-content input{
+      display: none;
+    }
+
+    .slider-box{
+    width: 25%;
+    height: auto;
+    position: relative;
+    text-align: center;
+    transition: 1s;
+}
+
+.slider-box img{
+    width: 100%;
+}
+
+.nav-manu, .nav-auto{
+    position: absolute;
+    width: 100%;
+    margin-top: 30%;
+    display:  flex;
+    justify-content: center;
+}
+
+.nav-manu .manu-btn, .nav-auto div{
+    border: 1px solid rgb(203, 204, 207);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.nav-manu .manu-btn:not(:last-child), .nav-auto div:not(:last-child){
+    margin-right: 10px;
+}
+
+.nav-manu .manu-btn:hover{
+    background-color: rgb(230, 231, 231);
+}
+
+#r1:checked ~ .nav-auto .auto-btn1, #r2:checked ~ .nav-auto .auto-btn2, #r3:checked ~ .nav-auto .auto-btn3, #r4:checked ~ .nav-auto .auto-btn4{
+    background-color: rgb(230, 231, 231);
+}
+
+#r1:checked ~ .primeiro{
+    margin-left: 0%;
+}
+
+#r2:checked ~ .primeiro{
+    margin-left: -25%;
+}
+
+#r3:checked ~ .primeiro{
+    margin-left: -50%;
+}
+
+#r4:checked ~ .primeiro{
+    margin-left: -75%;
+}
   </style>
 <style type="text/css" id="operaUserStyle"></style></head>
 <body>
@@ -352,29 +444,81 @@ nav.list1 div {
       </ul>
     </div>
     <nav class="list1">
-      <div class="pagina1"><a href="https://cadusquela.github.io/teste/Amor"><p>Home</p></a></div>
+      <div class="pagina1"><a href="https://cadusquela.github.io/teste/"><p>Home</p></a></div>
       <div class="pagina2"><a href="./Mais%20sobre.html"><p>Produtos</p></a></div>
       <div class="pagina3"><a href="https://www.youtube.com/@cadusquela"><p>Canal</p></a></div>
       <div class="pagina3"><a href="https://www.instagram.com/cadusquela.art/"><p>Instagram</p></a></div>
     </nav>
   </header>
 
-  <div class="conteudo">
-    <div class="corpo">
-      <img src="https://github.com/Cadusquela/Nana.com/blob/main/capa.png?raw=true" alt="capa">
+    <section class="slider">
+  <div class="slider-content">
+    <input type="radio" name="btnradio" id="r1" checked>
+    <input type="radio" name="btnradio" id="r2">
+    <input type="radio" name="btnradio" id="r3">
+    <input type="radio" name="btnradio" id="r4">
+
+    <div class="slider-box primeiro">
+      <img src="1.png" alt="Primeira-img">
     </div>
-    <div class="destaque">
-      <a href="https://cadusquela.github.io/Pagina1/" target="_self"><h2>Mais sobre...</h2></a>
+
+    <div class="slider-box">
+      <img src="2.png" alt="Segunda-img">
     </div>
+
+    <div class="slider-box">
+      <img src="3.png" alt="Terceira-img">
+    </div>
+
+    <div class="slider-box">
+      <img src="4.png" alt="Quarta-img">
+    </div>
+
+    <div class="nav-auto">
+            <div class="auto-btn1"></div>
+             <div class="auto-btn2"></div>
+              <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+        </div>
+
+        <div class="nav-manu">
+            <label for="r1" class="manu-btn"></label>
+             <label for="r2" class="manu-btn"></label>
+              <label for="r3" class="manu-btn"></label>
+                <label for="r4" class="manu-btn"></label>
+        </div>
+
   </div>
+
+</section>
 
   <section class="secao">
     <p>
-      O site a seguir é um exemplo sobre lojas e vendas de produtos, mas seu foco não é necessariamente esse, e sim a divulgação de um projeto pessoal relacionado a uma desenvolvedora Indie de games para PC, como o projeto não teve andamendo recente, o site como um todo foi adaptado para atribuir potifólio.
+      Não vou usar essa porra desse site pra nada, mas olha que foda que eu fiz<br><br>
+      Eai meu guri, blz, se tu ta vendo isso tu é foda, vou atualizar umas paradas aqui, 
+      e se tu tiver sorte eu ainda lanço uma demo do jogo pra tu jogar.<br><br>
+      Na barra de cima tem meu instagram, entra lá e manda um "site ruim em bixo" ai eu sei de onde tu veio.
     </p>
   </section>
-  
+
   <script>
+    var radio = document.querySelector('.manu-btn')
+    var cont = 1
+    document.getElementById('r1').checked = true
+
+    setInterval(() => {
+        proximaImg()
+    }, 5000)
+
+    function proximaImg(){
+        cont++
+
+        if(cont > 4){
+            cont = 1
+        }
+
+        document.getElementById('r'+cont).checked = true
+    }
     function Menubar() {
       const menu = document.getElementById("lateral");
       menu.classList.toggle("active");
@@ -391,4 +535,3 @@ nav.list1 div {
   </script>
 </body>
 </html>
-
