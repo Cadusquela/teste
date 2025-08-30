@@ -205,7 +205,7 @@
     }
 
     .secao3 img {
-      margin-right: 100px;
+      margin-right: 80px;
     }
 
     .title3{
@@ -286,4 +286,5 @@
 
 #r4:checked ~ .primeiro{
     margin-left: -75%;
+
 }
