@@ -288,3 +288,100 @@
     margin-left: -75%;
 
 }
+
+@media (max-width: 768px) {
+  body {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+  }
+
+  .top {
+    position: fixed;
+    background-color: rgb(28, 33, 32);
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+    width: 100vw;
+    z-index: 1000;
+  }
+
+  .logo {
+    text-align: center;
+    margin: 0;
+  }
+
+  .logo img {
+    width: 95px;
+  }
+
+  .paginas {
+    position: static;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .paginas div {
+    margin: 0;
+    width: auto;
+    height: auto;
+  }
+
+  .slider-content {
+    margin-top: 200px; 
+    width: 400%;
+  }
+
+  .slider-box {
+    margin-top: 0;
+    width: 100vw;
+  }
+
+  .slider-box img {
+    width: 100%;
+    height: auto;
+  }
+
+  
+  .secao,
+  .secao2,
+  .secao3 {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .secao img,
+  .secao2 img,
+  .secao3 img {
+    margin: 20px 0;
+    max-width: 50%;
+    height: auto;
+    width: 150px;
+  }
+
+  .title,
+  .title2,
+  .title3 {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+
+  .secao p,
+  .secao2 p,
+  .secao3 p {
+    margin: 10px 0;
+  }
+
+  .nav-manu, .nav-auto{
+    margin-top: 38%;
+  }
+}
+
