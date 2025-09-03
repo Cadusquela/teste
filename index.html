@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  
+  <meta name="google-site-verification" content="a6LPHjhqkHqJAWVEoDH7cR0hAGMgZhMJzqxuycTszLo" />
+  <meta name="description" content="Um site aleatório usado para divulgar um game indie que nunca deve sair.">
+
+  <meta name="author" content="Cadu, Cadusquela, Carlos Eduardo">
+  
+  <meta property="og:title" content="Machine Learning">
+  <meta property="og:description" content="Um site aleatório feito por um cara ai.">
+  <meta property="og:image" content="Logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="slide.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap" rel="stylesheet">
+  <link rel="icon" href="Logo.png" type="image/x-icon">
+  <title>Machine Learning</title>
+
+  <style>
+    *{
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    body{
+        background-color:rgb(28, 33, 32);
+    }
+
+    .cabecalho{
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        width: 100%;
+        height: 100px;
+        background-color: rgba(7, 8, 8, 0.4);
+        z-index: 1000;
+    }
+
+    .esquerda{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        margin-left: 20px;
+    }
+
+    .esquerda img{
+        width: 80px;
+    }
+
+    .esquerda ul{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin: 0 20px;
+        font-family:"Pacifico";
+    }
+
+    .esquerda a{
+        text-decoration:none;
+        color: white;
+    }
+
+    .esquerda a:hover{
+        text-decoration: underline white;
+    }
+
+    .direita{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-right: 20px;
+    }
+
+    .direita img{
+        width: 50px;
+    }
+
+    .secao, .secao2, .secao3{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 15px;
+      margin-top: 15px;
+      color: white;
+      border-radius: 3%;
+      border: 3px solid rgba(158, 2, 158, 0.397);
+      font-family: "Faculty Glyphic", sans-serif;
+    }
+
+    .secao img, .secao2 img, .secao3 img{
+      width: 350px;
+      height: auto;
+    }
+
+    .title, .title2, .title3{
+      text-align: center;
+      word-wrap: break-word;
+    }
+
+    @media screen and (max-width: 780px){
+      .cabecalho{
+        display: table-column;
+        height: 150px;
+      }
+
+      .esquerda{
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+      }
+
+      .esquerda img{
+        margin: 0;
+        width: 50px;
+        height: auto;
+      }
+
+      .esquerda ul{
+        display:inline-flex;
+        margin: 0;
+        margin-top: 10px;
+        width: auto;
+        height: auto;
+      }
+
+      .direita{
+        display: flex;
+        justify-content: right;
+      }
+
+      .direita img{
+        width: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <div class="cabecalho">
+            <div class="esquerda">
+                <img src="Logo.png" alt="logo.png">
+                <div class="paginas">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Curiosidades</a></li>
+                    <li><a href="#">Sobre mim</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="direita">
+                <a href="https://www.instagram.com/cadusquela.art"><img src="Instagram.png" alt="instagram"></a>
+                <a href="https://www.youtube.com/@cadusquela"><img src="Youtube.png" alt="youtube"></a>
+            </div>
+        </div>
+    </header>
+    <section class="slider">
+  <div class="slider-content">
+    <input type="radio" name="btnradio" id="r1" checked>
+    <input type="radio" name="btnradio" id="r2">
+    <input type="radio" name="btnradio" id="r3">
+    <input type="radio" name="btnradio" id="r4">
+
+    <div class="slider-box primeiro">
+      <img src="1.png" alt="Primeira-img">
+    </div>
+
+    <div class="slider-box">
+      <img src="2.png" alt="Segunda-img">
+    </div>
+
+    <div class="slider-box">
+      <img src="3.png" alt="Terceira-img">
+    </div>
+
+    <div class="slider-box">
+      <img src="4.png" alt="Quarta-img">
+    </div>
+
+    <div class="nav-auto">
+            <div class="auto-btn1"></div>
+             <div class="auto-btn2"></div>
+              <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+        </div>
+
+        <div class="nav-manu">
+            <label for="r1" class="manu-btn"></label>
+             <label for="r2" class="manu-btn"></label>
+              <label for="r3" class="manu-btn"></label>
+                <label for="r4" class="manu-btn"></label>
+        </div>
+
+  </div>
+
+    </section>
+
+    <section class="secao">
+    <div class="title">
+    <h1>
+      Games Indie;
+    </h1>
+    <p>
+      Jogos eletrônicos independentes são jogos eletrônicos criados por uma pessoa ou pequenas equipes com, 
+      ou sem apoio financeiro de publicadoras de jogos eletrônicos, e frequentemente focam em inovação, 
+      assim como apoiam-se na distribuição digital.<br><br>
+      Hades é um jogo eletrônico roguelike de RPG de ação desenvolvido e publicado pela 
+      Supergiant Games. Foi lançado para Microsoft Windows, macOS e Nintendo Switch em 17
+       de setembro de 2020, após um lançamento de acesso antecipado em dezembro de 2018.
+    </p>
+    </div>
+    <img src="https://static.wikia.nocookie.net/hades_gamepedia_en/images/e/ec/Zagreus_empathetic.png/revision/latest/scale-to-width/360?cb=20200715170032?raw=true" alt="hades-img">
+  </section>
+  <section class="secao2">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Celeste_character_Madeline_with_strawberry.png?raw=true" alt="hades-img">
+    <div class="title2">
+      <h1>
+        Celeste
+      </h1>
+      <p>
+        Celeste é um jogo eletrônico de plataforma desenvolvido pelos canadenses Maddy Thorson
+         e Noel Berry, com arte feita pelo estúdio brasileiro MiniBoss.
+          O jogo foi originalmente criado como um protótipo de quatro dias durante uma game jam,
+           e depois foi expandido para o seu lançamento completo.
+      </p>
+    </div>
+  </section>
+  <section class="secao3">
+    <div class="title3">
+      <h1>
+        Hollow Knight
+      </h1>
+      <p>
+        Hollow Knight é um jogo indie de gênero metroidvania desenvolvido
+         e publicado pela Team Cherry, lançado para Microsoft Windows, macOS e Linux em 2017 e, 
+         posteriormente, para Nintendo Switch, Playstation 4 e Xbox One em 2018.
+      </p>
+    </div>
+    <img src="https://www.pngplay.com/wp-content/uploads/11/Hollow-Knight-Background-PNG-Image.png?raw=true" alt="hades-img">
+  </section>
+
+<script>
+    var radio = document.querySelector('.manu-btn')
+    var cont = 1
+    document.getElementById('r1').checked = true
+
+    setInterval(() => {
+        proximaImg()
+    }, 5000)
+
+    function proximaImg(){
+        cont++
+
+        if(cont > 4){
+            cont = 1
+        }
+
+        document.getElementById('r'+cont).checked = true
+    }
+    function Menubar() {
+      const menu = document.getElementById("lateral");
+      menu.classList.toggle("active");
+    }
+
+    document.addEventListener('click', function(event) {
+      const menu = document.getElementById("lateral");
+      const button = document.getElementById("menu-btn");
+
+      if (!menu.contains(event.target) && !button.contains(event.target)) {
+        menu.classList.remove("active");
+      }
+    });
+  </script>
+</body>
+</html>
