@@ -246,6 +246,23 @@
     </div>
     <img src="https://www.pngplay.com/wp-content/uploads/11/Hollow-Knight-Background-PNG-Image.png?raw=true" alt="hades-img">
   </section>
+  <footer>
+    <form action="enviar.php" method="post">
+    <label>Nome:</label><br>
+    <input type="text" name="nome" required><br><br>
+
+    <label>Email:</label><br>
+    <input type="email" name="email" required><br><br>
+
+    <label>Telefone:</label><br>
+    <input type="text" name="telefone"><br><br>
+
+    <label>Mensagem:</label><br>
+    <textarea name="mensagem" rows="5" required></textarea><br><br>
+
+    <button type="submit">Enviar</button>
+  </form>
+  </footer>
 
 <script>
     var radio = document.querySelector('.manu-btn')
@@ -280,4 +297,5 @@
     });
   </script>
 </body>
+
 </html>
