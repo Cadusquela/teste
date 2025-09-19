@@ -1,0 +1,149 @@
+   *{
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    :root{
+        --cor: rgb(158, 2, 158);
+    }
+
+    body{
+        background-color:rgb(28, 33, 32);
+    }
+
+    .cabecalho{
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        width: 100%;
+        height: 100px;
+        background-color: rgba(7, 8, 8, 0.4);
+        z-index: 1000;
+    }
+
+    .esquerda{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        margin-left: 20px;
+    }
+
+    .esquerda img{
+        width: 80px;
+    }
+
+    .esquerda ul{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin: 0 20px;
+        font-family:"Pacifico";
+    }
+
+    .esquerda a{
+        text-decoration:none;
+        color: white;
+    }
+
+    .esquerda a:hover{
+        text-decoration: underline white;
+    }
+
+    .direita{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-right: 20px;
+    }
+
+    .direita img{
+        width: 50px;
+    }
+
+    .secao, .secao2, .secao3{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 15px;
+      margin-top: 15px;
+      color: white;
+      border-radius: 24px;
+      border: 3px solid rgba(158, 2, 158, 0.397);
+      font-family: "Faculty Glyphic", sans-serif;
+    }
+
+    .secao img, .secao2 img, .secao3 img{
+      width: 350px;
+      height: auto;
+    }
+
+    .title, .title2, .title3{
+      text-align: center;
+      word-wrap: break-word;
+    }
+
+    footer{
+      display: flex;
+      height: 250px;
+      background-color: black;
+      margin-top: 150px;
+      color:white;
+      align-items: center;
+      border-top: 2px solid var(--cor);
+    }
+
+    .criador{
+        
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .redes{
+        color: white;
+        transition: 0.1s;
+        background-color: blue;
+    }
+
+    .redes:hover{
+        color: var(--cor);
+    }
+
+    @media screen and (max-width: 780px){
+      .cabecalho{
+        display: table-column;
+        height: 150px;
+      }
+
+      .esquerda{
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+      }
+
+      .esquerda img{
+        margin: 0;
+        width: 50px;
+        height: auto;
+      }
+
+      .esquerda ul{
+        display:inline-flex;
+        margin: 0;
+        margin-top: 10px;
+        width: auto;
+        height: auto;
+      }
+
+      .direita{
+        display: flex;
+        justify-content: right;
+      }
+
+      .direita img{
+        width: 30px;
+      }
+    }
